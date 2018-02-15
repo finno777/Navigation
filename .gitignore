@@ -1,0 +1,5 @@
+.idea/
+target/
+*.iml
+npm-debug.log
+/sources/temp/sprite.symbol.html

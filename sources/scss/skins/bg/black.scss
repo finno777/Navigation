@@ -1,0 +1,21 @@
+@import "../../../../frontend-shell/shared/skinsVariables/base/background/black";
+@import "main-bg";
+
+// new style
+.spec-banner__top .dropdown__item a{
+  color:$special-item-color !important;
+}
+
+.spec-banner__top .dropdown.dropdown_spec .dropdown__list{
+  background: darken($special-item-second-color, 10%) !important;
+}
+
+.checkbutton:checked + label:before{
+  background: $special-item-second-color url(../../images/header/tick_for_checkbox_black.svg) no-repeat center;
+}
+
+.spec-word_filter::before{
+  background:url(../../images/header/arrow_down_black.svg) no-repeat center;
+}
+
+//global

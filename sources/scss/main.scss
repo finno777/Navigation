@@ -1,0 +1,76 @@
+@import "../../frontend-shell/node_modules/include-media/dist/include-media";
+
+
+@import "../../frontend-shell/shared/variables";
+@import "../../frontend-shell/shared/controls";
+@import "header/variables";
+@import "header/banner";
+@import "header/menu";
+@import "breadcrumbs/breadcrumbs";
+@import "header/header-search";
+@import "header/mediaQueries";
+@import "sideNav/widget";
+@import "sideNav/modal";
+@import "siteMap/siteMap";
+
+.low, .middle, .big{
+  @import "header/spec-header";
+}
+
+.black{
+  @import "skins/bg/black";
+}
+
+.white{
+  @import "skins/bg/white";
+}
+
+.blue{
+  @import "skins/bg/blue";
+}
+
+.show{
+  @import "skins/image-show/show";
+}
+
+.hide{
+  @import "skins/image-show/hide";
+}
+
+.ptsans{
+  @import "skins/font-family/ptsans";
+}
+
+.trebuchet{
+  @import "skins/font-family/rubik";
+}
+
+.lsZero{
+  @import "skins/letter-spacing/ls0";
+}
+
+.lsMiddle{
+  @import "skins/letter-spacing/ls05";
+}
+
+.lsBig{
+  @import "skins/letter-spacing/ls1";
+}
+
+.low{
+  @import "skins/font-size/low";
+}
+
+.middle{
+  @import "skins/font-size/middle";
+}
+
+.big{
+  @import "skins/font-size/big";
+}
+
+@include media('<1200px') {
+  body.mobile-noscroll {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<gatein-resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://www.exoplatform.org/xml/ns/gatein_resources_1_4 http://www.exoplatform.org/xml/ns/gatein_resources_1_4"
+                  xmlns="http://www.exoplatform.org/xml/ns/gatein_resources_1_4">
+
+    <!-- TopNavigation Portlet -->
+    <portlet>
+        <name>TopNavigation</name>
+        <module>
+            <script>
+                <adapter>
+                    (function($) {
+                    <include>/js/gost/header/clock.js</include>
+                    <include>/js/gost/header/banner.js</include>
+                    <include>/js/gost/header/menu.js</include>
+                    <include>/js/gost/header/spec-header.js</include>
+                    svgForEverybody.init();
+                    })($);
+                </adapter>
+            </script>
+            <depends>
+                <module>jquery</module>
+                <as>$</as>
+            </depends>
+            <depends>
+                <module>gostSvg4Everybody</module>
+            </depends>
+        </module>
+    </portlet>
+
+    <!-- SideNavigation Portlet -->
+    <portlet>
+        <name>SideNavigation</name>
+        <module>
+            <script>
+                <adapter>
+                    (function($) {
+                    <include>/js/gost/sideNav/api.js</include>
+                    <include>/js/gost/sideNav/dialogs.js</include>
+                    <include>/js/gost/sideNav/portlet-settings.js</include>
+                    <include>/js/gost/sideNav/add-group.js</include>
+                    <include>/js/gost/sideNav/add-external-page.js</include>
+                    <include>/js/gost/sideNav/add-internal-page.js</include>
+                    <include>/js/gost/sideNav/index.js</include>
+                    })($);
+                </adapter>
+            </script>
+            <depends>
+                <module>jquery</module>
+                <as>$</as>
+            </depends>
+            <depends>
+                <module>jqueryUI</module>
+            </depends>
+            <depends>
+                <module>bluebird</module>
+            </depends>
+            <depends>
+                <module>gostFileManager</module>
+            </depends>
+            <depends>
+                <module>gostValidation</module>
+            </depends>
+        </module>
+    </portlet>
+</gatein-resources>

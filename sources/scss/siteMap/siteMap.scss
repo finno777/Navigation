@@ -1,0 +1,119 @@
+@import "../../../frontend-shell/node_modules/include-media/dist/include-media";
+@import "../../../frontend-shell/shared/main";
+
+.site-map {
+  margin-bottom: 60px;
+
+  @include media('<768px'){
+    margin-bottom: 40px;
+  }
+
+  &__inner {
+    padding-left: 32px;
+
+    ._link {
+      text-decoration: none;
+      line-height: 1;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    ._icon {
+      width: 22px;
+      height: 22px;
+      background-color: #ffffff;
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: -32px;
+      cursor: pointer;
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url('../../images/siteMap/icon-acco.svg') center no-repeat;
+        width: 7px;
+        height: 12px;
+      }
+    }
+  }
+
+  .section {
+    &-title {
+      position: relative;
+      margin-bottom: 20px;
+
+      ._link {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c3756;
+
+        @include media('<768px'){
+          font-size: 20px;
+        }
+      }
+
+      &.active{
+        > ._icon{
+          transform: rotate(90deg);
+        }
+
+        > .section-inner{
+          display: block;
+        }
+      }
+    }
+
+    &-inner {
+      border-left: 2px solid #e8e8ea;
+      margin: 20px 0 30px 20px;
+      padding-left: 20px;
+      display: none;
+
+      @include media('<768px'){
+        margin-left: 0;
+      }
+
+      .section{
+        &-title {
+          margin-bottom: 15px;
+
+          ._link {
+            font-size: 20px;
+            color: #000000;
+            font-weight: normal;
+
+            @include media('<768px'){
+              font-size: 16px;
+            }
+          }
+        }
+
+        &-inner{
+          margin-bottom: 25px;
+          margin-top: 15px;
+
+          .section{
+            &-title {
+              ._link {
+                font-size: 18px;
+              }
+            }
+
+            &-inner{
+              margin-top: 15px;
+              padding-left: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

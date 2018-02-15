@@ -1,0 +1,76 @@
+@import "../../../../frontend-shell/shared/skinsVariables/base/background/white";
+@import "main-bg";
+
+.mce-i-redo::before {
+  background: url(/eXoResources/skin/GostSkin/AccessibleSkins/../GostImages/redo-white.png) no-repeat 50% !important;
+}
+
+.mce-i-undo::before {
+  background: url(/eXoResources/skin/GostSkin/AccessibleSkins/../GostImages/redo-revert.png) no-repeat 50% !important;
+}
+
+.checkbutton:checked + label:before{
+  background: $special-item-second-color url(../../images/header/tick_for_checkbox_white.svg) no-repeat center;
+}
+
+.spec-word_filter::before{
+  background:url(../../images/header/arrow_down_white.svg) no-repeat center;
+}
+
+.communication__item .item__btn .button:hover{
+  border-color:$special-item-color;
+}
+
+li[data-bg='black'] .ribbon{
+  display:none !important;
+}
+
+.main-banner__wrap{
+  background:black;
+}
+
+.logo__title, .logo__description, .spec-banner__cab{
+  color:$special-item-color;
+}
+
+.spec-banner__search-submit{
+  background: $special-item-color;
+  color:$special-item-second-color;
+}
+
+.dropdown.dropdown_spec .dropdown__button{
+  color:$special-item-color;
+
+  &::after{
+    background: linear-gradient(45deg, transparent 0%, transparent 50%, $special-item-color 50%, $special-item-color 100%);
+  }
+}
+
+.dropdown_spec.active{
+  .dropdown__button{
+    color:$special-item-second-color;
+
+    &::after{
+      background: linear-gradient(45deg, transparent 0%, transparent 50%, $special-item-second-color 50%, $special-item-second-color 100%);
+    }
+  }
+}
+
+.spec-banner__top .dropdown.dropdown_spec .dropdown__list{
+  background: $special-item-second-color !important;
+}
+
+//global
+
+.ui-datepicker .ui-datepicker-prev span{
+  background:url(../../images/header/arrow-left.png) no-repeat center;
+}
+
+.ui-datepicker .ui-datepicker-next span{
+  background:url(../../images/header/arrow-right.png) no-repeat center;
+}
+
+.button:disabled, .button[disabled], .button--disabled, .button.disabled, a.button:disabled, a.button[disabled], a.button--disabled, a.button.disabled, .ui-button:disabled, .ui-button[disabled], .ui-button--disabled, .ui-button.disabled, .ui-button.ui-state-default:disabled, .ui-button.ui-state-default[disabled], .ui-button.ui-state-default--disabled, .ui-button.ui-state-default.disabled{
+  background:darken($special-item-color, 40%);
+  border-color:darken($special-item-color, 40%);
+}

@@ -1,0 +1,63 @@
+@import "../../../../frontend-shell/shared/skinsVariables/base/background/blue";
+@import "main-bg";
+
+.logo__title, .logo__description, .spec-banner__cab{
+  color:$special-item-color;
+}
+
+.spec-banner__search-submit{
+  background: $special-item-color;
+  color:$special-item-second-color;
+}
+
+.dropdown_spec .dropdown__button{
+  color:$special-item-color !important;
+}
+
+.side-nav, .main-banner__wrap{
+  background:$background-body;
+}
+
+.nav-menu__wrap{
+  background: #053562 !important;
+}
+
+.nav-menu__item{
+  a{
+    color:#a2d0ff !important;
+    border-color:#a2d0ff;
+  }
+
+  &:hover a{
+    color:#a2d0ff !important;
+  }
+}
+
+.radiobutton:not(checked) + label:before{
+  background:$special-item-second-color;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-current-day a{
+  background:$special-item-color !important;
+  color:$special-item-second-color !important;
+}
+
+.ui-datepicker-today a{
+  background:$special-item-color !important;
+}
+
+.dropdown.dropdown_spec .dropdown__button::after{
+    background: linear-gradient(45deg, transparent 0%, transparent 50%, $special-item-color 50%, $special-item-color 100%);
+}
+
+.checkbutton:checked + label:before, .search-sidebar__sub-title ._title.full:before{
+  background: $special-item-color url(../../images/header/tick_for_checkbox_blue.svg) no-repeat center !important;
+}
+
+.checkbutton:not(checked) + label:before, .search-sidebar__sub-title ._title:before{
+  background:$special-item-color !important;
+}
+
+.toggler__menu{
+  background: $special-item-second-color;
+}

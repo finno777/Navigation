@@ -1,0 +1,128 @@
+.overlay-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 6;
+  display: none;
+}
+
+.main-header {
+  &--open-search {
+    .main-banner__wrap {
+      position: relative;
+
+      .datetime, .actions {
+        opacity: 0;
+      }
+    }
+
+    .header-search {
+      display: block;
+    }
+
+    &.main-header--sticky {
+      .main-banner__wrap {
+        position: static;
+      }
+      .nav-menu__item {
+        opacity: 0;
+      }
+      .nav-menu__logo {
+        opacity: 1;
+      }
+
+      .header-search {
+        position: fixed;
+        top: 13px;
+        transform: none;
+
+        &__field {
+          flex: 1;
+          max-width: none;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.header-search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 7;
+  display: none;
+  width: 100%;
+
+  @include media('<800px') {
+    display: none !important;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__field {
+    flex: 0 0 600px;
+    max-width: 600px;
+    margin-left: auto;
+    position: relative;
+
+    ._btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      z-index: 8;
+      width: 54px;
+      height: 54px;
+      min-width: 0;
+      padding: 14px;
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+      outline: 0;
+      cursor: pointer;
+      color: #2aac4a;
+
+      svg {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      &:hover {
+        color: #259541;
+      }
+    }
+  }
+
+  &__input {
+    border-radius: 100px;
+    outline: none;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    padding: 0 50px 0 20px;
+
+    &::-webkit-input-placeholder {
+      color: #9397A5;
+    }
+    &::-moz-placeholder {
+      color: #9397A5;
+    }
+    &:-moz-placeholder {
+      color: #9397A5;
+    }
+    &:-ms-input-placeholder {
+      color: #9397A5;
+    }
+  }
+
+  &__action {
+    margin-left: 10px;
+  }
+}

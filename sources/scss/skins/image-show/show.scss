@@ -1,0 +1,49 @@
+// @import "../../../../frontend-shell/shared/skinsVariables/base/letter-spacing/show";
+
+li[data-img='show'] {
+  cursor: default;
+  
+ .spec-switcher {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 3px 3.5px;
+    width: calc(100% - 7px);
+    height: calc(100% - 6px);
+    background: black;
+  }
+
+  .spec-switcher__lines {
+    width: 2px;
+    height: 19px;
+    background-color: white;
+    position: relative;
+
+    &::after {
+      left: 7px;
+    }
+
+    &::before {
+      right: 7px;
+    }
+
+    &::after, &::before {
+        content: '';
+        width: 2px;
+        height: 19px;
+        background-color: white;
+        position: absolute;
+    }
+  }
+}

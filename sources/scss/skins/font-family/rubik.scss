@@ -1,0 +1,12 @@
+@import "../../../../frontend-shell/shared/skinsVariables/base/fontFamily/rubik";
+
+
+label[data-font='trebuchet'] .dropdown__checkobox-fake{
+  margin-right: 12px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: black url(../../images/header/tick_for_checkbox_white.svg) no-repeat center !important;
+  border: solid 1px #000000;
+  color: #000000;
+}

@@ -1,0 +1,3 @@
+/* This file is generated — do not edit by hand! */
+/* eslint-disable */
+{"version":3,"sources":["header/init.js"],"names":["topNav","clock","init","banner","menu","$"],"mappings":";;AAAA;AACA,CAAC,aAAK;AACFA,WAAOC,KAAP,CAAaC,IAAb;AACAF,WAAOG,MAAP,CAAcD,IAAd;AACAF,WAAOI,IAAP,CAAYF,IAAZ;AACH,CAJD,EAIGG,CAJH","file":"../../header/init.js","sourcesContent":["/* global $, eXo */\r\n($ => {\r\n    topNav.clock.init();\r\n    topNav.banner.init();\r\n    topNav.menu.init();\r\n})($);\r\n\r\n"]}

@@ -1,0 +1,40 @@
+$navigationGroupItemHeight: 78px;
+$navigationGroupSettingPadding: ($navigationGroupItemHeight - $icon-button-size) / 2;
+
+.navigation-group-table {
+    border: solid 1px $border-color;
+    .navigation-group-table__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation-group-table__item {
+        border: solid 1px $border-separator-color;
+        height: $navigationGroupItemHeight;
+        padding: 0 20px;
+
+        span {
+            font-family: $default-font;
+            font-size: $inner-title-font-size;
+            letter-spacing: $default-letter-spacing;
+            color: $text-color;
+            line-height: $navigationGroupItemHeight;
+        }
+
+        .dropdown {
+            float: right;
+            margin-top: $navigationGroupSettingPadding;
+            height: $icon-button-size;
+            box-sizing: border-box;
+        }
+
+        .navigation-group__title {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: calc(100% - 73px);
+            display: inline-block;
+        }
+    }
+}
